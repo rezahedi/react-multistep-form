@@ -10,3 +10,9 @@ main{
 form{
   @apply pt-9;
 }
+.actions{
+  @apply flex gap-4 justify-end mt-6;
+}
+button{
+  @apply px-4 py-2 rounded-md border border-gray-600 hover:bg-gray-100 active:scale-95;
+}
