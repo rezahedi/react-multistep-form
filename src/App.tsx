@@ -2,13 +2,15 @@ import React from 'react';
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className='text-red-500'>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+    <div className='container'>
+      <main>
+        <div className='step'>1 / 2</div>
+        <form>
+          form
+        </form>
+      </main>
     </div>
   );
 }

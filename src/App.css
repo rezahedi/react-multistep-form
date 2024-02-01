@@ -1,0 +1,12 @@
+.container{
+  @apply flex items-center justify-center p-4 sm:px-20 sm:py-40;
+}
+main{
+  @apply max-w-lg w-full sm:w-[600px] border rounded-md p-4 relative;
+}
+.step{
+  @apply absolute top-0 right-0 text-nowrap p-4;
+}
+form{
+  @apply pt-9;
+}
