@@ -3,7 +3,7 @@ import './App.css';
 import useMultistepForm from './useMultistepForm';
 
 function App() {
-  const {steps, currentStepIndex, step, previous, next} = useMultistepForm([
+  const {steps, currentStepIndex, step, previous, next, isFirstStep, isLastStep} = useMultistepForm([
     <div>One</div>,
     <div>Two</div>,
     <div>Three</div>,
@@ -16,8 +16,8 @@ function App() {
         <form>
           {step}
           <div className='actions'>
-            <button type='button' onClick={previous}>Previous</button>
-            <button type='button' onClick={next}>Next</button>
+            {!isFirstStep && <button type='button' onClick={previous}>Previous</button>}
+            <button type='button' onClick={next}>{isLastStep ? `Submit` : `Next`}</button>
           </div>
         </form>
       </main>
