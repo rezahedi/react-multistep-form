@@ -10,9 +10,18 @@ main{
 form{
   @apply pt-9;
 }
+input {
+  @apply w-full px-4 py-2 rounded-md border border-gray-600 mb-4;
+}
 .actions{
   @apply flex gap-4 justify-end mt-6;
 }
 button{
   @apply px-4 py-2 rounded-md border border-gray-600 hover:bg-gray-100 active:scale-95;
+}
+.wrapper{
+  @apply flex flex-col gap-2;
+}
+.wrapper h2{
+  @apply text-2xl font-bold;
 }
