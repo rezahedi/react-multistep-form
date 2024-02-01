@@ -5,19 +5,38 @@ import FirstStepForm from './FirstStepForm';
 import SecondStepForm from './SecondStepForm';
 import ThirdStepForm from './ThirdStepForm';
 
+type DataProps = {
+  name: string,
+  lastname: string,
+  age: string,
+  email: string,
+}
+
+const INITIAL_DATA: DataProps = {
+  name: '',
+  lastname: '',
+  age: '',
+  email: '',
+}
+
 function App() {
+  const [data, setData] = React.useState(INITIAL_DATA);
   const {steps, currentStepIndex, step, previous, next, isFirstStep, isLastStep} = useMultistepForm([
-    <FirstStepForm />,
-    <SecondStepForm />,
-    <ThirdStepForm />,
+    <FirstStepForm {...data} updateFields={updateFields} />,
+    <SecondStepForm {...data} updateFields={updateFields} />,
+    <ThirdStepForm {...data} updateFields={updateFields} />,
   ]);
+
+  function updateFields(fields: Partial<DataProps>) {
+    setData((prev) => ({...prev, ...fields}));
+  }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!isLastStep)
       return next();
 
-    alert('Form submitted');
+    console.log(data)
   }
 
   return (
