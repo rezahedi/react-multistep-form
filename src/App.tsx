@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
 import useMultistepForm from './useMultistepForm';
+import FirstStepForm from './FirstStepForm';
+import SecondStepForm from './SecondStepForm';
+import ThirdStepForm from './ThirdStepForm';
 
 function App() {
   const {steps, currentStepIndex, step, previous, next, isFirstStep, isLastStep} = useMultistepForm([
-    <div>One</div>,
-    <div>Two</div>,
-    <div>Three</div>,
+    <FirstStepForm />,
+    <SecondStepForm />,
+    <ThirdStepForm />,
   ]);
 
   return (
