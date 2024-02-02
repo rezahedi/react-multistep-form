@@ -1,8 +1,8 @@
 .container{
-  @apply flex items-center justify-center p-4 sm:px-20 sm:py-40;
+  @apply flex items-center justify-center p-4 sm:mx-auto sm:my-40;
 }
 main{
-  @apply max-w-lg w-full sm:w-[600px] border rounded-md p-4 relative;
+  @apply max-w-lg w-full sm:min-w-[500px] border rounded-md p-4 relative;
 }
 .step{
   @apply absolute top-0 right-0 text-nowrap p-4;
@@ -14,7 +14,7 @@ input {
   @apply w-full px-4 py-2 rounded-md border border-gray-600 mb-4;
 }
 .actions{
-  @apply flex gap-4 justify-end mt-6;
+  @apply flex gap-4 justify-end mt-6 flex-wrap;
 }
 button{
   @apply px-4 py-2 rounded-md border border-gray-600 hover:bg-gray-100 active:scale-95;
