@@ -6,17 +6,21 @@ import SecondStepForm from './SecondStepForm';
 import ThirdStepForm from './ThirdStepForm';
 
 type DataProps = {
-  name: string,
+  firstname: string,
   lastname: string,
   age: string,
+  birthdate: string,
   email: string,
+  password: string,
 }
 
 const INITIAL_DATA: DataProps = {
-  name: '',
+  firstname: '',
   lastname: '',
   age: '',
+  birthdate: '',
   email: '',
+  password: '',
 }
 
 function App() {
