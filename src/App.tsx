@@ -43,6 +43,10 @@ function App() {
     console.log(data)
   }
 
+  function handleReset() {
+    setData(INITIAL_DATA);
+  }
+
   return (
     <div className='container'>
       <main>
@@ -50,6 +54,7 @@ function App() {
         <form onSubmit={handleSubmit}>
           {step}
           <div className='actions'>
+            <button type='button' onClick={handleReset}>Reset</button>
             {!isFirstStep && <button type='button' onClick={previous}>Previous</button>}
             <button type='submit'>{isLastStep ? `Submit` : `Next`}</button>
           </div>
